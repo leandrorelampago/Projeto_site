@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markes Outlet</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="revel.js" defer></script>
+    <!-- Incluindo o Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
+    <style>
+      .ww {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      }
+    
+      /* Container principal do Swiper */
+      .swiper-container  h1{
+        font-size: 5vw;  /* Usando unidades de viewport para responsividade */
+        color: white;
+        font-weight: 700; 
+        -webkit-text-stroke: 2px white;
+        color: transparent;
+      }
+      
+      .swiper-container {
+        width: 100%;
+        max-width: 960px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        box-sizing: border-box;
+      }
+    
+      /* Slide individual */
+      .swiper-slide {
+        background-color: #fff;
+        border-radius: 30px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 320px;
+        height: 450px;
+        transition: all 0.3s ease-in-out; /* Transição suave em todos os efeitos */
+        border: 2px solid rgba(255, 255, 255, 0); /* Borda invisível inicialmente */
+      }
+    
+      /* Efeito Neon com rotação de cores */
+      .swiper-slide:hover {
+        border: 2px solid rgba(0, 255, 231, 0.8); /* Borda intensa com cor rgba */
+        box-shadow: 0 0 20px rgba(0, 255, 231, 1),  /* Brilho da borda */
+                    0 0 30px rgba(0, 255, 231, 0.7), /* Brilho adicional mais suave */
+                    0 0 50px rgba(0, 255, 231, 0.6); /* Brilho ainda mais suave */
+        animation: neonEffect 2s infinite; /* Animação de rotação de cores */
+      }
+    
+      /* Animação de rotação de cores */
+      @keyframes neonEffect {
+        0% {
+          filter: hue-rotate(0deg); /* Começa com a cor original */
+        }
+        25% {
+          filter: hue-rotate(90deg); /* Primeira rotação de 90 graus */
+        }
+        50% {
+          filter: hue-rotate(180deg); /* Segunda rotação de 180 graus */
+        }
+        75% {
+          filter: hue-rotate(270deg); /* Terceira rotação de 270 graus */
+        }
+        100% {
+          filter: hue-rotate(360deg); /* Volta para o começo com 360 graus */
+        }
+      }
+    
+      /* Estilo da imagem dentro do slide */
+      .picture {
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+      }
+    
+      .picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer;
+      }
+    
+      /* Detalhes dentro do slide */
+      .detail {
+        padding: 20px;
+        text-align: center;
+        flex-grow: 1;
+      }
+    
+      .detail h3 {
+        margin: 0;
+        font-size: 20px;
+      }
+    
+      .detail span {
+        display: block;
+        font-size: 16px;
+        color: #f44336;
+      }
+    
+      /* Scroll Progress */
+      #progressbar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 10px;
+        height: 100%;
+        background: linear-gradient(to top, #008aff, #00ffe7);
+        animation: animate 5s linear infinite;
+      }
+    
+      @keyframes animate {
+        0%, 100% {
+          filter: hue-rotate(0deg);
+        }
+        50% {
+          filter: hue-rotate(360deg);
+        }
+      }
+    
+      @media (max-width: 768px) {
+        .swiper-container {
+          width: 90%;
+        }
+      }
+      
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logotipo">
+            <video autoplay loop muted playsinline class="back-video" poster="imagem-de-fundo.jpg">
+                <source src="videoplayback (1) (online-video-cutter.com) (1).mp4" type="video/mp4">
+            </video>
+            <nav>
+              <img src="LOGO-removebg-preview.png" alt="Logotipo Markes Outlet" class="logo">
+              <div class="mobile-menu">
+                  <div class="line1"></div>
+                  <div class="line2"></div>
+                  <div class="line3"></div>
+              </div>
+              <ul class="nav-list">
+                  <li><a href="#">INÍCIO</a></li>
+                  <li><a href="#">NOVIDADES</a></li>
+                  <li><a href="#">PRODUTOS</a></li>
+                  <li><a href="#">CARRINHO</a></li>
+                  <li><a href="#">CONTATO</a></li>
+                  
+              </ul>
+          </nav>
+          
+            <div class="content">
+                <h1>Markes Outlet</h1>
+            </div>
+        </div>
+    </header>
+    </head>
+    <body>
+      <section class="ww">
+      <div id="progressbar"> </div>
+      <div id="scrollPath"></div>
+    
+      <!-- Slider principal -->
+      <div class="swiper-container efeito-scroll-reveal">
+        <h1>Novidades</h1>
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide ">
+            <div class="picture">
+              <img src="jordan-Teyana1.webp">alt="">
+            </div>
+            <div class="detail">
+              <h3>Air Jordan 1</h3>
+              <span> Teyana Taylor</span>
+            </div>
+          </div>
+    
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="picture">
+              <img src="lamelo.webp" alt="">
+            </div>
+            <div class="detail">
+              <h3>Puma MB1</h3>
+              <span>Lamelo Ball Queen City</span>
+            </div>
+          </div>
+    
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="picture">
+              <img src="air-force-1-mid-x-off-white2.jpg" alt="">
+            </div>
+            <div class="detail">
+              <h3>Air Force Mid</h3>
+              <span>Air Force 1 Mid x Off-White</span>
+            </div>
+          </div>
+    
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <div class="picture">
+              <img src="Air-Jordan-4.jpeg" alt="">
+            </div>
+            <div class="detail">
+              <h3>Air Jordan 4</h3>
+              <span>Seafoam</span>
+            </div>
+          </div>
+    
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <div class="picture">
+              <img src="air-jordan-1-high-og-skyline.jpg" alt="">
+            </div>
+            <div class="detail">
+              <h3>Air Jordan 1</h3>
+              <span>Skyline</span>
+            </div>
+          </div>
+    
+          
+
+    
+        </div>
+    
+        <!-- Paginação -->
+        <div class="swiper-pagination"></div>
+    
+      </div>
+    
+      <!-- Incluindo o Swiper JS -->
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+      <script>
+        // Inicializando o Swiper
+        var swiper = new Swiper(".swiper-container", {
+          effect: "coverflow",        // Efeito Coverflow
+          grabCursor: true,           // Cursor de mão ao arrastar
+          centeredSlides: true,       // Slides centralizados
+          slidesPerView: "auto",      // Exibe um número variável de slides
+          coverflowEffect: {
+            rotate: 20,               // Ângulo de rotação dos slides
+            stretch: 0,               // Distância entre os slides
+            depth: 350,               // Profundidade do efeito
+            modifier: 1,              // Modificador do efeito
+            slideShadows: true,       // Adiciona sombras nos slides
+          },
+          pagination: {
+            el: ".swiper-pagination", // Paginação
+          },
+        });
+    
+        // Adicionando um clique nas imagens para navegar entre os slides
+var images = document.querySelectorAll('.swiper-slide .picture img');
+
+// Mantendo a funcionalidade existente para as imagens
+images.forEach((img, index) => {
+  img.addEventListener('click', function() {
+    swiper.slideTo(index);
+  });
+});
+
+// Adicionando um clique nos detalhes para navegar entre os slides
+var details = document.querySelectorAll('.swiper-slide .detail');
+
+details.forEach((detail, index) => {
+  detail.addEventListener('click', function() {
+    swiper.slideTo(index);
+  });
+});
+
+window.revelar = ScrollReveal({reset:true})
+revelar.reveal('.efeito-scroll-reveal',{
+  duration:10000,
+  distance:'90px'
+});
+var swiper = new Swiper(".swiper-container", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 20,
+    stretch: 0,
+    depth: 350,
+    modifier: 1,
+    slideShadows: true
+  },
+  pagination: {
+    el: ".swiper-pagination"
+  }
+});
+var swiper = new Swiper(".swiper-container", {
+  effect: "coverflow",        // Efeito Coverflow
+  grabCursor: true,           // Cursor de mão ao arrastar
+  centeredSlides: true,       // Slides centralizados
+  slidesPerView: "auto",      // Exibe um número variável de slides
+  initialSlide: 2,            // Define o terceiro slide como o inicial (índice 2)
+  coverflowEffect: {
+    rotate: 20,               // Ângulo de rotação dos slides
+    stretch: 0,               // Distância entre os slides
+    depth: 350,               // Profundidade do efeito
+    modifier: 1,              // Modificador do efeito
+    slideShadows: true,       // Adiciona sombras nos slides
+  },
+  pagination: {
+    el: ".swiper-pagination", // Paginação
+  },
+});
+
+
+      </script>
+      </section>
+      
+<script src="mobile-navbar.js"></script>     
+    
+</body>
+</html>
